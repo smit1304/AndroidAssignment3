@@ -243,7 +243,7 @@ fun AddProductScreen(
                     // Observe success and navigate
                     LaunchedEffect(success) {
                         if (success) {
-                            navController.navigate("home") {
+                            navController.navigate("product_home") {
                                 popUpTo("add") { inclusive = true } // Corrected route name
                             }
                             viewModel.resetSuccessState()
