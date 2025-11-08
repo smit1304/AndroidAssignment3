@@ -4,44 +4,49 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.ui.theme.SmitPatelSanjeevChauhan_COMP304_001_Assignment3Theme
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.ui.theme.navigation.AppNavigation
 
 class MainActivity : ComponentActivity() {
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+
+
         setContent {
             SmitPatelSanjeevChauhan_COMP304_001_Assignment3Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                // Get window size class for responsive layouts
+                val windowSizeClass = calculateWindowSizeClass(this)
+                // Create navigation controller
+                val navController = rememberNavController()
+
+                // Main app content
+                AppContent(
+                    windowSizeClass = windowSizeClass,
+                    navController = navController
+                )
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
-@Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    SmitPatelSanjeevChauhan_COMP304_001_Assignment3Theme {
-        Greeting("Android")
+private fun AppContent(
+    windowSizeClass: androidx.compose.material3.windowsizeclass.WindowSizeClass,
+    navController: androidx.navigation.NavHostController
+) {
+    MaterialTheme {
+        AppNavigation(
+            windowSizeClass = windowSizeClass,
+            navController = navController
+        )
     }
 }
