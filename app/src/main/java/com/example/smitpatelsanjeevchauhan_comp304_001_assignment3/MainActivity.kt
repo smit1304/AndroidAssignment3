@@ -9,17 +9,14 @@ import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSiz
 import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.ui.theme.SmitPatelSanjeevChauhan_COMP304_001_Assignment3Theme
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.ui.theme.navigation.AppNavigation
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.theme.SmitPatelSanjeevChauhan_COMP304_001_Assignment3Theme
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.navigation.AppNavigation
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-
-
         setContent {
             SmitPatelSanjeevChauhan_COMP304_001_Assignment3Theme {
                 // Get window size class for responsive layouts
