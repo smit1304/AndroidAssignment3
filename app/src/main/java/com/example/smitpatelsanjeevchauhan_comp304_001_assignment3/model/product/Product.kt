@@ -9,6 +9,7 @@ data class Product(
     @PrimaryKey val id: Int,
     val name: String,
     val price: Double,
+    val quantity: Int,
     val deliveryDate: String,
     val category: String,
     val isFavorite: Boolean

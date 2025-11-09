@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
-class ProductViewModel (application: Application) : AndroidViewModel(application) {
+class ProductViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: ProductRepository
     val allProducts: LiveData<List<Product>>
     val favoriteProducts: LiveData<List<Product>>
@@ -27,6 +27,7 @@ class ProductViewModel (application: Application) : AndroidViewModel(application
         val id: String = "",
         val name: String = "",
         val price: String = "",
+        val quantity: String = "",
         val deliveryDate: String = "",
         val category: String = "",
         val isFavorite: Boolean = false,
@@ -52,13 +53,18 @@ class ProductViewModel (application: Application) : AndroidViewModel(application
         if (id == null || id !in 101..999) errors.add("Invalid ID (101-999)")
 
         // Name Validation
-        if(state.name.isBlank()){
+        if (state.name.isBlank()) {
             errors.add("Name required")
         }
 
         // Price validation
         val price = state.price.toDoubleOrNull()
-        if (price == null || price <= 0) errors.add("Price must be positive")
+        if (price == null || price <= 0) errors.add("Price must positive")
+
+        // Quantity validation
+        val quantity = state.quantity.toIntOrNull()
+        if (quantity == null || quantity <= 0) errors.add("Quantity must be greater than 0")
+
 
         // Date validation
         val currentDate = LocalDate.now()
@@ -82,6 +88,7 @@ class ProductViewModel (application: Application) : AndroidViewModel(application
                     id = id!!,
                     name = state.name,
                     price = price!!,
+                    quantity = quantity!!,
                     deliveryDate = state.deliveryDate,
                     category = state.category,
                     isFavorite = state.isFavorite
@@ -100,6 +107,7 @@ class ProductViewModel (application: Application) : AndroidViewModel(application
         id: String? = null,
         name: String? = null,
         price: String? = null,
+        quantity: String? = null,
         deliveryDate: String? = null,
         category: String? = null,
         isFavorite: Boolean? = null
@@ -109,6 +117,7 @@ class ProductViewModel (application: Application) : AndroidViewModel(application
                 id = id ?: current.id,
                 name = name ?: current.name,
                 price = price ?: current.price,
+                quantity = quantity ?: current.quantity,
                 deliveryDate = deliveryDate ?: current.deliveryDate,
                 category = category ?: current.category,
                 isFavorite = isFavorite ?: current.isFavorite

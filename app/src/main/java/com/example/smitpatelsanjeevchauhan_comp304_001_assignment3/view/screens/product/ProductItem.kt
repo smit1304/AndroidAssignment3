@@ -23,7 +23,6 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.product.Product
 
-
 @Composable
 fun ProductItem(
     product: Product,
@@ -42,14 +41,20 @@ fun ProductItem(
             modifier = Modifier.padding(16.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            // Product info column without clickable modifier
             Column(modifier = Modifier.weight(1f)) {
                 Text(product.name, style = MaterialTheme.typography.titleMedium)
+                Text(
+                    text = "ID: ${product.id}",
+                    style = MaterialTheme.typography.bodySmall
+                )
                 Text("$${product.price}", style = MaterialTheme.typography.bodyMedium)
                 Text(product.category, style = MaterialTheme.typography.bodySmall)
+                Text(
+                    "Delivery: ${product.deliveryDate}",
+                    style = MaterialTheme.typography.bodySmall
+                )
             }
 
-            // Action buttons
             Row {
                 IconButton(
                     onClick = onToggleFavorite,
@@ -65,22 +70,34 @@ fun ProductItem(
                 }
 
                 IconButton(
-                    onClick = {
-                        println("Edit clicked for product ${product.id}")
-                        onEdit()
-                    },
+                    onClick = onEdit,
                     modifier = Modifier.testTag("edit_button")
                 ) {
-                    Icon(Icons.Default.Edit, "Edit")
+                    Icon(
+                        imageVector = Icons.Filled.Edit,
+                        contentDescription = "Edit product"
+                    )
                 }
 
                 IconButton(
                     onClick = onDelete,
                     modifier = Modifier.testTag("delete_button")
                 ) {
-                    Icon(Icons.Default.Delete, "Delete")
+                    Icon(
+                        imageVector = Icons.Filled.Delete,
+                        contentDescription = "Delete product"
+                    )
                 }
             }
         }
     }
 }
+
+
+//Icon(
+//imageVector = if (product.isFavorite) Icons.Default.Favorite
+//else Icons.Outlined.FavoriteBorder,
+//contentDescription = "Favorite",
+//tint = if (product.isFavorite) Color.Red
+//else MaterialTheme.colorScheme.onSurface
+//)

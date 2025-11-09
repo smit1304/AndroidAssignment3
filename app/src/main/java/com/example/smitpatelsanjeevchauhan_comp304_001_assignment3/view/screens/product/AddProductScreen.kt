@@ -166,6 +166,18 @@ fun AddProductScreen(
 
                     Spacer(Modifier.height(16.dp))
 
+                    //
+                    // Name Field (New)
+                    OutlinedTextField(
+                        value = state.quantity,
+                        onValueChange = { viewModel.updateFormState(quantity = it) },
+                        label = { Text("Product Quantity") },
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 4.dp)
+                    )
+
                     // Date Picker
                     OutlinedButton(
                         onClick = { showDatePicker = true },
