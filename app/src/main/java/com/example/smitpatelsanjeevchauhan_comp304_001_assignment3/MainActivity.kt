@@ -17,9 +17,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-
-
         setContent {
             SmitPatelSanjeevChauhan_COMP304_001_Assignment3Theme {
                 // Get window size class for responsive layouts
