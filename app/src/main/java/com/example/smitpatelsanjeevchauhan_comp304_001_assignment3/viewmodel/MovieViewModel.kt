@@ -6,9 +6,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.data.Movie
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.data.MovieDatabase
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.data.MovieRepository
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.Movie
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.MovieDatabase
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.MovieRepository
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -5,9 +5,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.data.Product
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.data.ProductDatabase
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.data.ProductRepository
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.Product
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.ProductDatabase
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.ProductRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
