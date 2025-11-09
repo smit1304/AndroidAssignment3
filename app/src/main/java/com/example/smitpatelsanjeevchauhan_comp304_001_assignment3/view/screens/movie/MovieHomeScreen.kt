@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.movieAppScreens
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.movie
 
 
 import androidx.compose.foundation.background
@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.compose.foundation.lazy.items
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.Movie
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.movie.Movie
 import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.viewmodel.MovieViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)

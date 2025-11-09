@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.movieAppScreens
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.movie
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons

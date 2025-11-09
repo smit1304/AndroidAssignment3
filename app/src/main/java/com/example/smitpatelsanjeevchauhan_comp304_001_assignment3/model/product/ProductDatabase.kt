@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.product
 
 import androidx.room.Database
 import android.content.Context

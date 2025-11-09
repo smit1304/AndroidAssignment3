@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.movieAppScreens
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.movie
 
 
 import androidx.compose.foundation.layout.*
@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.Movie
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.movie.Movie
 
 @Composable
 fun MovieItem(

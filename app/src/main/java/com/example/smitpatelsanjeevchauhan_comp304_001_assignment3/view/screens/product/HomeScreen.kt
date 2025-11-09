@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.productAppScreens
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.product
 
 
 import androidx.compose.foundation.background
@@ -39,7 +39,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.Product
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.product.Product
 import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.viewmodel.ProductViewModel
 
 // Main screen displaying all products

@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.movie
 import kotlinx.coroutines.flow.Flow
 
 

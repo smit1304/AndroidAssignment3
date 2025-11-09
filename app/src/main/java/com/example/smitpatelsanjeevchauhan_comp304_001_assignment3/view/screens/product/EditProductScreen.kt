@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.productAppScreens
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.product
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

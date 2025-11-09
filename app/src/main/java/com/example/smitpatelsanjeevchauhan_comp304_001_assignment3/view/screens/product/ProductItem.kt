@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.productAppScreens
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.product
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,7 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
-import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.Product
+import com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.model.product.Product
 
 
 @Composable
