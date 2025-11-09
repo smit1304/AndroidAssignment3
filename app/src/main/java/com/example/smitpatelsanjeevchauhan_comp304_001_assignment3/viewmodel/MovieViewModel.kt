@@ -82,6 +82,12 @@ class MovieViewModel (application: Application) : AndroidViewModel(application) 
         val validGenres = listOf("Family", "Comedy", "Thriller", "Action")
         if (state.genre !in validGenres) errors.add("Select a valid genre")
 
+        // Duplicate ID Check
+        val existingMovies = allMovies.value.orEmpty()
+        if (id != null && existingMovies.any { it.id == id }) {
+            errors.add("Movie ID $id already exists")
+        }
+
         if (errors.isEmpty()) {
             insert(
                 Movie(
