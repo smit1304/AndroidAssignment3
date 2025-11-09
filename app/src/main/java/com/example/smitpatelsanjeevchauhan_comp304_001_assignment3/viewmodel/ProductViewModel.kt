@@ -51,6 +51,11 @@ class ProductViewModel (application: Application) : AndroidViewModel(application
         val id = state.id.toIntOrNull()
         if (id == null || id !in 101..999) errors.add("Invalid ID (101-999)")
 
+        // Name Validation
+        if(state.name.isBlank()){
+            errors.add("Name required")
+        }
+
         // Price validation
         val price = state.price.toDoubleOrNull()
         if (price == null || price <= 0) errors.add("Price must be positive")
