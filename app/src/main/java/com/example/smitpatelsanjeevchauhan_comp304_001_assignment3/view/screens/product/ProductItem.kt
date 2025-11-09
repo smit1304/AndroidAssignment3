@@ -48,6 +48,10 @@ fun ProductItem(
                     style = MaterialTheme.typography.bodySmall
                 )
                 Text("$${product.price}", style = MaterialTheme.typography.bodyMedium)
+                Text(
+                    "Quantity: ${product.quantity}",
+                    style = MaterialTheme.typography.bodySmall
+                )
                 Text(product.category, style = MaterialTheme.typography.bodySmall)
                 Text(
                     "Delivery: ${product.deliveryDate}",

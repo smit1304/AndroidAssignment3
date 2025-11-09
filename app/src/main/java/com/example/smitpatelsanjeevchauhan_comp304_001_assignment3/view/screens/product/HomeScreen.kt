@@ -163,7 +163,7 @@ fun HomeScreen(
                                 )
                                 Spacer(Modifier.height(16.dp))
                                 Text(
-                                    "Price: $${product.quantity}",
+                                    "Quantity: $${product.quantity}",
                                     style = MaterialTheme.typography.titleMedium
                                 )
                                 Text(
