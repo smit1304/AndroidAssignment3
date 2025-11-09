@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.moviescreens
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.movieAppScreens
 
 
 import androidx.compose.foundation.layout.*

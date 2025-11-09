@@ -1,4 +1,4 @@
-package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens
+package com.example.smitpatelsanjeevchauhan_comp304_001_assignment3.view.screens.productAppScreens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
